@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name angularUiApp
- * @description
- * # angularUiApp
- *
- * Main module of the application.
- */
 angular
   .module('angularUiApp', [
     'ngAnimate',
@@ -21,8 +13,15 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl'
       })
       .otherwise({
         redirectTo: '/'
